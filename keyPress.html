@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="main">
+        <div>
+        <p>   A function is triggered when user is pressing the key in the input field. </p> 
+        <input type="text" id="press">
+        <p id="result"> </p>
+        </div>
+    </div>
+
+
+
+    <script>
+        const press = document.getElementById('press');
+        press.addEventListener("keypress" , (event)=>{
+           const result = document.getElementById('result');
+           result.innerHTML= `you press ${event.key} and its code is ${event.code} `; 
+        });
+        // press.addEventListener("keyup" , (event)=>{
+        //    const result = document.getElementById('result');
+        //    result.innerHTML= `you press ${event.key} and its code is ${event.code} `; 
+        // });
+        press.addEventListener("keydown" , (event)=>{
+           const result = document.getElementById('result');
+           result.innerHTML= `you press ${event.key} and its code is ${event.code} `; 
+        });
+    </script>
+</body>
+</html>

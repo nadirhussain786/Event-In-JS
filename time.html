@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <p>Want to know my name</p>
+            <p id="showmyname"></p>
+            <br>
+            <button id="btn">Click Here</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const myname = document.getElementById('showmyname');
+        const btn = document.getElementById('btn');
+        const showname = ()=>{
+            myname.innerHTML ="Loading ...";
+            setTimeout(()=>{
+                myname.innerHTML="Nadir Hussain";
+            } ,1000)
+        }
+        btn.addEventListener('click' , showname);
+    </script>
+</body>
+</html>

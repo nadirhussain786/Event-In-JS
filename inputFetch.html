@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Fetch</title>
+    <style>
+       .main{
+        font-size: 25px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       line-height: 1.6;
+
+       }
+       input{
+        height: 20px;
+       border: 2px solid black;
+       border-radius: 5px;
+       font-size: 20px;
+       padding: 5px;
+       }
+       select{
+        height: 30px;
+       border: 2px solid black;
+       border-radius: 5px;
+       font-size: 20px;
+       }
+
+    </style>
+</head>
+<body>
+      
+    <div class="main">
+        <div>
+            <label for="">Enter your name : </label>
+            <input type="text" id="ice">
+
+            <br>
+            <label> Choose an ice Cream flavour :
+            <select name="icecream" id="icecream" onchange="selectElement()">
+                <option value="">Select One...</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Sardine">Sardine</option>
+                <option value="Vanilla">Vanilla</option>
+            </select>
+            </label>
+            <div id="result">
+              
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const selectElement = ()=>{
+            const ice = document.getElementById('ice').value;
+            const icecream = document.getElementById('icecream').value;
+            const result = document.getElementById('result');
+            result.innerHTML = `Mr. / Mrs. ${ice} select ${icecream} icecream flavour `;
+      
+    }
+
+    </script>
+</body>
+</html>
